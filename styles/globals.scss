@@ -1,0 +1,332 @@
+@import url("http://fonts.cdnfonts.com/css/br-firma?styles=81215,81211,81213,81217,81207");
+
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "BR Firma", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Logo
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 4rem;
+  color: #000;
+
+  &__text {
+    margin-right: 0.6rem;
+  }
+
+  &__accent {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #eabb17;
+  }
+}
+
+// Button
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2.3rem 1rem 2rem;
+  background-color: #eabb17;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  &__link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 4rem;
+    color: #212121;
+  }
+}
+
+//SECtion HEADER
+.sectionHeader {
+  font-size: 3.4rem;
+  font-weight: 600;
+  line-height: 6.5rem;
+  color: #212121;
+
+  &__accent {
+    display: inline;
+    color: #eabb17;
+  }
+}
+
+// HEADER
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // padding: 2.0833% 0 2.0833% 8.3333%;
+  //  padding: 3rem 14.95rem 3rem 12rem;
+  padding: 3rem 10.3819% 3rem 8.3333%;
+  // padding: 2.0833% 10.3819% 2.0833% 8.3333%;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    &__list {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        display: flex;
+        align-items: center;
+
+        &__link {
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 2rem;
+          padding-block: 0.6rem;
+          color: #000;
+
+          &--home {
+            color: #eabb17;
+          }
+
+          &--about {
+            margin-left: 6.75rem;
+          }
+
+          &--spaces {
+            margin-left: 6.2rem;
+          }
+
+          &--contact {
+            margin-left: 3.875rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  margin-bottom: 8.7rem;
+  text-align: center;
+  color: #fff;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    background: linear-gradient(180deg, #373737 0%, rgba(55, 55, 55, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-inline: 25%;
+
+    &__heading {
+      font-size: 4.8rem;
+      font-weight: 600;
+      line-height: 6.4rem;
+      margin-top: 7.1rem;
+
+      &__accent {
+        display: inline;
+        color: #eabb17;
+      }
+    }
+
+    &__text {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.9rem;
+      // margin-bottom: 3.4rem;
+    }
+  }
+}
+
+.about {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 8rem 11.983rem 11.3rem;
+
+  .sectionHeader {
+    margin-bottom: 8.333rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 2.017rem;
+
+    & > * {
+      flex: 1 0 0;
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding-block: 3.6rem 8rem;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 4px 28px 0px rgba(113, 113, 113, 0.18);
+        color: #212121;
+
+        & > * {
+          width: 75%;
+        }
+
+        &__title {
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: 2.3rem;
+          margin-bottom: 5.4rem;
+        }
+
+        &__body {
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+.facilities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding: 8rem 0 10.9rem 12rem;
+  padding: 8rem 0 10.9rem 0;
+
+  .sectionHeader {
+    margin-bottom: 8rem;
+  }
+
+  &__content {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+
+    &__facility {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.3rem;
+        color: #212121;
+      }
+    }
+  }
+}
+
+.coverletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 8rem 12rem 8.8rem;
+
+  .sectionHeader {
+    margin-bottom: 13.4rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 4.1rem;
+      width: 38.5833%;
+
+      &__text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: #717171;
+      }
+
+      &__form {
+        display: flex;
+
+        &__email {
+          flex-grow: 1;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.4rem;
+          padding: 1rem;
+          border: 1px solid #c1c1c1;
+          outline: none;
+          border-radius: 8px 0 0 8px;
+          color: #717171;
+
+          &::placeholder {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: #d8cfcf;
+          }
+        }
+
+        &__submit {
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.4rem;
+          padding-inline: 1rem;
+          border: none;
+          outline: none;
+          background: #eabb17;
+          border-radius: 0 8px 8px 0;
+          color: #212121;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
