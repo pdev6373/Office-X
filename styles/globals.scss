@@ -20,11 +20,6 @@ li {
   list-style: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 a {
   text-decoration: none;
 }
@@ -89,6 +84,7 @@ a {
   //  padding: 3rem 14.95rem 3rem 12rem;
   padding: 3rem 10.3819% 3rem 8.3333%;
   // padding: 2.0833% 10.3819% 2.0833% 8.3333%;
+  box-shadow: 0px 1px 20px 0px #0000000d;
 
   &__nav {
     display: flex;
@@ -97,6 +93,7 @@ a {
     &__list {
       display: flex;
       align-items: center;
+      // flex-direction: column;
 
       &__item {
         display: flex;
@@ -235,7 +232,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // padding: 8rem 0 10.9rem 12rem;
   padding: 8rem 0 10.9rem 0;
 
   .sectionHeader {
@@ -244,13 +240,27 @@ a {
 
   &__content {
     display: flex;
-    gap: 4rem;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    padding-left: 12rem;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      // display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      // background: #000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+    }
 
     &__facility {
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
+      flex-shrink: 0;
+      margin-right: 4rem;
 
       &__title {
         font-size: 1.8rem;
@@ -324,6 +334,99 @@ a {
           background: #eabb17;
           border-radius: 0 8px 8px 0;
           color: #212121;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 8rem;
+
+  .sectionHeader {
+    margin-bottom: 8rem;
+  }
+}
+
+.footer {
+  padding-inline: 12rem;
+  color: #212121;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      &__heading {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.8rem;
+        margin-bottom: 2.4rem;
+      }
+
+      &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        margin-bottom: 9rem;
+
+        &__text {
+          font-size: 1.4rem;
+          font-weight: 300;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &__extras {
+    margin-bottom: 6.9rem;
+
+    &__line {
+      margin-bottom: 2.4rem;
+      width: 100%;
+      height: 1px;
+      background: #c4c4c4;
+      border-radius: 100px;
+    }
+
+    &__body {
+      display: flex;
+
+      &__texts {
+        display: flex;
+        align-items: center;
+        color: #212121;
+
+        &__text {
+          font-size: 1.4rem;
+          font-weight: 300;
+          line-height: 1.8rem;
+
+          &--bold {
+            display: inline;
+          }
+        }
+
+        &__dot {
+          margin-inline: 0.4rem;
+          width: 2px;
+          height: 2px;
+          background: #212121;
+          border-radius: 100%;
+        }
+      }
+
+      &__iconsWrapper {
+        display: flex;
+        gap: 2.3rem;
+        margin-inline: auto;
+
+        &__icon {
           cursor: pointer;
         }
       }
