@@ -48,11 +48,11 @@ export const Facilities = () => {
   return (
     <section className="facilities">
       <SectionHeader normalText="Our" accentText="Facilities" />
-      <div className="facilities__content">
+      {/* <div className="facilities__content">
         {facilities.map((facility) => (
           <Body image={facility.image} title={facility.title} />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

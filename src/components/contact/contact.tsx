@@ -1,9 +1,12 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { SectionHeader } from "../sectionHeader";
 import { FooterInfo } from "./footerInfo";
 
 export const Contact = () => {
+  const { width } = useWindowDimensions();
+
   let footerInfos = [
     {
       heading: "About",
@@ -28,13 +31,14 @@ export const Contact = () => {
 
     {
       heading: "Contact us",
-      // body: ["send us an email: inquiry@officex.com"],
       body: [
         <>
-          <div className="footer__content__item__body__text--bold">
-            send us an email:
+          <div className="footer__content__item__body__text__accent">
+            send us an email:&nbsp;
           </div>
-          inquiry@officex.com
+          <div className="footer__content__item__body__text__normal">
+            inquiry@officex.com
+          </div>
         </>,
       ],
     },
@@ -76,7 +80,11 @@ export const Contact = () => {
         <SectionHeader normalText="Here’s where" accentText="you can find us" />
 
         <span className="contact__image">
-          <Image src="/map.svg" width="1440" height="620" />
+          {width > 350 ? (
+            <Image src="/map.svg" width="1440" height="620" />
+          ) : (
+            <Image src="/map.svg" width="420" height="219" />
+          )}
         </span>
       </section>
 

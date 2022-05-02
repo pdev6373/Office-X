@@ -12,6 +12,10 @@
   font-size: 62.5%;
 }
 
+// html {
+//   font-size: 62.5%;
+// }
+
 body {
   font-family: "BR Firma", sans-serif;
 }
@@ -24,6 +28,20 @@ a {
   text-decoration: none;
 }
 
+// #__next {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 100%;
+// }
+
+// .home {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 100%;
+// }
+
 // Logo
 .logo {
   font-size: 2.5rem;
@@ -31,14 +49,28 @@ a {
   line-height: 4rem;
   color: #000;
 
+  @media (max-width: 375px) {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
   &__text {
     margin-right: 0.6rem;
+
+    @media (max-width: 375px) {
+      margin-right: 0.4rem;
+    }
   }
 
   &__accent {
     font-size: 3rem;
     font-weight: 700;
     color: #eabb17;
+
+    @media (max-width: 375px) {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
   }
 }
 
@@ -53,11 +85,21 @@ a {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 
+  @media (max-width: 375px) {
+    gap: 0.7rem;
+    padding: 0.4rem 1.425rem 0.4rem 2rem;
+  }
+
   &__link {
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 4rem;
     color: #212121;
+
+    @media (max-width: 375px) {
+      font-size: 1.4rem;
+      line-height: 3.1rem;
+    }
   }
 }
 
@@ -67,6 +109,11 @@ a {
   font-weight: 600;
   line-height: 6.5rem;
   color: #212121;
+
+  @media (max-width: 375px) {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
 
   &__accent {
     display: inline;
@@ -79,25 +126,63 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #fff;
 
   // padding: 2.0833% 0 2.0833% 8.3333%;
   //  padding: 3rem 14.95rem 3rem 12rem;
-  padding: 3rem 10.3819% 3rem 8.3333%;
   // padding: 2.0833% 10.3819% 2.0833% 8.3333%;
+  padding: 3rem 10.3819% 3rem 8.3333%;
   box-shadow: 0px 1px 20px 0px #0000000d;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  &__logo-hamburger {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: 375px) {
+      padding: 2.85rem 2.2rem 2.85rem 1.6rem;
+      box-shadow: 0px 1px 20px 0px #0000000d;
+    }
+  }
 
   &__nav {
     display: flex;
     align-items: center;
 
+    @media (max-width: 375px) {
+      padding-inline: 1.6rem 2.2rem;
+      width: 100%;
+    }
+
     &__list {
       display: flex;
       align-items: center;
-      // flex-direction: column;
+
+      @media (max-width: 375px) {
+        flex-direction: column;
+        // gap: 1.7rem;
+        text-align: center;
+        width: 100%;
+      }
 
       &__item {
         display: flex;
         align-items: center;
+
+        @media (max-width: 375px) {
+          width: 100%;
+        }
 
         &__link {
           font-size: 1.6rem;
@@ -106,20 +191,45 @@ a {
           padding-block: 0.6rem;
           color: #000;
 
+          @media (max-width: 375px) {
+            font-weight: 400;
+            line-height: 2.4rem;
+            padding-block: 0.8rem 1.2rem;
+            border-bottom: 1px solid #c1c1c14d;
+            width: 100%;
+          }
+
           &--home {
             color: #eabb17;
+            font-weight: 700;
+
+            @media (max-width: 375px) {
+              margin-top: 2rem;
+            }
           }
 
           &--about {
             margin-left: 6.75rem;
+
+            @media (max-width: 375px) {
+              margin-left: 0;
+            }
           }
 
           &--spaces {
             margin-left: 6.2rem;
+
+            @media (max-width: 375px) {
+              margin-left: 0;
+            }
           }
 
           &--contact {
             margin-left: 3.875rem;
+
+            @media (max-width: 375px) {
+              margin-left: 0;
+            }
           }
         }
       }
@@ -132,6 +242,10 @@ a {
   margin-bottom: 8.7rem;
   text-align: center;
   color: #fff;
+
+  @media (max-width: 375px) {
+    margin-bottom: 4rem;
+  }
 
   span {
     display: flex;
@@ -152,11 +266,22 @@ a {
     left: 0;
     padding-inline: 25%;
 
+    @media (max-width: 375px) {
+      gap: 2.4rem;
+      padding-inline: 5%;
+    }
+
     &__heading {
       font-size: 4.8rem;
       font-weight: 600;
       line-height: 6.4rem;
       margin-top: 7.1rem;
+
+      @media (max-width: 375px) {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-top: 2.4rem;
+      }
 
       &__accent {
         display: inline;
@@ -169,6 +294,11 @@ a {
       font-weight: 500;
       line-height: 2.9rem;
       // margin-bottom: 3.4rem;
+
+      @media (max-width: 375px) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
     }
   }
 }
@@ -178,6 +308,10 @@ a {
   background: #f8f8f8;
   padding: 8rem 11.983rem 11.3rem;
 
+  @media (max-width: 375px) {
+    padding-inline: 1.6rem;
+  }
+
   .sectionHeader {
     margin-bottom: 8.333rem;
   }
@@ -186,6 +320,11 @@ a {
     display: flex;
     justify-content: center;
     gap: 2.017rem;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     & > * {
       flex: 1 0 0;
@@ -207,8 +346,16 @@ a {
         box-shadow: 0px 4px 28px 0px rgba(113, 113, 113, 0.18);
         color: #212121;
 
+        @media (max-width: 375px) {
+          padding-bottom: 6.6rem;
+        }
+
         & > * {
           width: 75%;
+
+          @media (max-width: 375px) {
+            width: 86.0058%;
+          }
         }
 
         &__title {
@@ -216,12 +363,21 @@ a {
           font-weight: 600;
           line-height: 2.3rem;
           margin-bottom: 5.4rem;
+
+          @media (max-width: 375px) {
+            margin-bottom: 5.6rem;
+          }
         }
 
         &__body {
           font-size: 1.8rem;
           font-weight: 400;
           line-height: 2.4rem;
+
+          @media (max-width: 375px) {
+            line-height: 2.8rem;
+            color: #717171;
+          }
         }
       }
     }
@@ -279,8 +435,16 @@ a {
   background-color: #f8f8f8;
   padding: 8rem 12rem 8.8rem;
 
+  @media (max-width: 375px) {
+    padding: 5.1rem 1.6rem;
+  }
+
   .sectionHeader {
     margin-bottom: 13.4rem;
+
+    @media (max-width: 375px) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__content {
@@ -289,17 +453,38 @@ a {
     align-items: center;
     width: 100%;
 
+    @media (max-width: 375px) {
+      flex-direction: column;
+    }
+
+    &__image {
+      @media (max-width: 375px) {
+        margin-bottom: 3.3rem;
+      }
+    }
+
     &__body {
       display: flex;
       flex-direction: column;
       gap: 4.1rem;
+      text-align: center;
       width: 38.5833%;
+
+      @media (max-width: 375px) {
+        width: 100%;
+      }
 
       &__text {
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 2.4rem;
         color: #717171;
+
+        @media (max-width: 375px) {
+          font-size: 1.4rem;
+          line-height: 2.8rem;
+          padding-inline: 1.1rem;
+        }
       }
 
       &__form {
@@ -316,15 +501,24 @@ a {
           border-radius: 8px 0 0 8px;
           color: #717171;
 
+          @media (max-width: 375px) {
+            font-size: 1.4rem;
+          }
+
           &::placeholder {
             font-size: 1.8rem;
             font-weight: 400;
             line-height: 2.4rem;
             color: #d8cfcf;
+
+            @media (max-width: 375px) {
+              font-size: 1.4rem;
+            }
           }
         }
 
         &__submit {
+          flex-shrink: 0;
           font-size: 1.8rem;
           font-weight: 400;
           line-height: 2.4rem;
@@ -335,6 +529,10 @@ a {
           border-radius: 0 8px 8px 0;
           color: #212121;
           cursor: pointer;
+
+          @media (max-width: 375px) {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -347,8 +545,18 @@ a {
   align-items: center;
   padding-block: 8rem;
 
+  @media (max-width: 375px) {
+    padding-block: 4rem 6rem;
+  }
+
   .sectionHeader {
     margin-bottom: 8rem;
+
+    @media (max-width: 375px) {
+      text-align: center;
+      padding-inline: 8.4rem;
+      margin-bottom: 3.4rem;
+    }
   }
 }
 
@@ -356,9 +564,17 @@ a {
   padding-inline: 12rem;
   color: #212121;
 
+  @media (max-width: 375px) {
+    padding-inline: 1.6rem;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+    }
 
     &__item {
       &__heading {
@@ -374,10 +590,19 @@ a {
         gap: 1.6rem;
         margin-bottom: 9rem;
 
+        @media (max-width: 375px) {
+          margin-bottom: 4.8rem;
+        }
+
         &__text {
+          display: flex;
           font-size: 1.4rem;
           font-weight: 300;
           line-height: 1.8rem;
+
+          &__accent {
+            font-weight: 500;
+          }
         }
       }
     }
@@ -386,21 +611,38 @@ a {
   &__extras {
     margin-bottom: 6.9rem;
 
+    @media (max-width: 375px) {
+      margin-block: 2rem;
+    }
+
     &__line {
       margin-bottom: 2.4rem;
       width: 100%;
       height: 1px;
       background: #c4c4c4;
       border-radius: 100px;
+
+      @media (max-width: 375px) {
+        margin-bottom: 4.25rem;
+      }
     }
 
     &__body {
       display: flex;
 
+      @media (max-width: 375px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       &__texts {
         display: flex;
         align-items: center;
         color: #212121;
+
+        @media (max-width: 375px) {
+          margin-bottom: 4.25rem;
+        }
 
         &__text {
           font-size: 1.4rem;
