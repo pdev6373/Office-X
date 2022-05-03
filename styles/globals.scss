@@ -694,10 +694,10 @@ a {
       flex-direction: column;
       gap: 4.1rem;
       flex-shrink: 0;
-      text-align: center;
       width: 38.5833%;
 
       @media (max-width: 930px) {
+        text-align: center;
         width: 80%;
       }
 
