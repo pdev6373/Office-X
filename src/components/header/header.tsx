@@ -9,7 +9,7 @@ export const Header = () => {
   const [iconDetails, setIconDetails] = useState({
     path: "/Vector.svg",
     width: 15.75,
-    height: 12,
+    height: 15,
   });
   const { width } = useWindowDimension();
 
@@ -23,7 +23,7 @@ export const Header = () => {
 
   return (
     <header className="header">
-      {width > 375 ? (
+      {width > 700 ? (
         <>
           <Logo />
           <Nav />
@@ -33,12 +33,21 @@ export const Header = () => {
           <div className="header__logo-hamburger">
             <Logo />
             <span className="header__logo-hamburger__image">
-              <Image
-                onClick={handleClick}
-                src={iconDetails.path}
-                width={iconDetails.width}
-                height={iconDetails.height}
-              />
+              {width > 375 ? (
+                <Image
+                  onClick={handleClick}
+                  src={iconDetails.path}
+                  width={22}
+                  height={16.5}
+                />
+              ) : (
+                <Image
+                  onClick={handleClick}
+                  src={iconDetails.path}
+                  width={iconDetails.width}
+                  height={iconDetails.height}
+                />
+              )}
             </span>
           </div>
           {isOpen && <Nav />}

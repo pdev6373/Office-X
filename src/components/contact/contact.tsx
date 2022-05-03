@@ -104,12 +104,12 @@ export const Contact = () => {
           <div className="footer__extras__body">
             <div className="footer__extras__body__texts">
               {extraTexts.map((extraText) => (
-                <>
+                <div key={extraText}>
                   <div className="footer__extras__body__texts__text">
                     {extraText}
                   </div>
                   <div className="footer__extras__body__texts__dot"></div>
-                </>
+                </div>
               ))}
             </div>
 
