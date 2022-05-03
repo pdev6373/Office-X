@@ -12,8 +12,9 @@ export default function Home() {
       <Hero />
       <About />
       <Facilities />
+      {/* 
       {/* <Coverletter /> */}
-      <Contact />
+      {/* <Contact /> */}
     </main>
   );
 }
