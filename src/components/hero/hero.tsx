@@ -2,7 +2,7 @@ import Image from "next/image";
 import useWindowDimension from "../../hooks/useWindowDimensions";
 import { Heading } from "./heading";
 import { Body } from "./body";
-import { Button } from "../button";
+import { Button } from "../button/button";
 
 export const Hero = () => {
   const { width } = useWindowDimension();
