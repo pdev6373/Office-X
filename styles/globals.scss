@@ -47,7 +47,7 @@
 
 body {
   font-family: "BR Firma", sans-serif;
-  min-width: 215px;
+  min-width: 225px;
 }
 
 li {
@@ -692,7 +692,7 @@ a {
     padding-block: 5.1rem;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 630px) {
     padding: 5.1rem 2.5rem;
   }
 
@@ -721,7 +721,6 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 15rem;
-    // flex-wrap: wrap;.
     width: 100%;
 
     @media (max-width: 1170px) {
@@ -762,71 +761,84 @@ a {
         width: 100%;
       }
 
-      // &__text {
-      //   font-size: 1.8rem;
-      //   font-weight: 400;
-      //   line-height: 2.4rem;
-      //   color: #717171;
+      &__text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: #717171;
 
-      //   @media (max-width: 700px) {
-      //     font-size: 1.7rem;
-      //     line-height: 3rem;
-      //   }
+        @media (max-width: 700px) {
+          font-size: 1.7rem;
+          line-height: 3rem;
+        }
 
-      //   @media (max-width: 375px) {
-      //     font-size: 1.4rem;
-      //     line-height: 2.8rem;
-      //     padding-inline: 1.1rem;
-      //   }
-      // }
+        @media (max-width: 375px) {
+          font-size: 1.4rem;
+          line-height: 2.8rem;
+          padding-inline: 1.1rem;
+        }
+      }
 
       &__form {
         display: flex;
 
-        // &__email {
-        //   flex-grow: 1;
-        //   font-size: 1.8rem;
-        //   font-weight: 400;
-        //   line-height: 2.4rem;
-        //   padding: 1rem;
-        //   border: 1px solid #c1c1c1;
-        //   outline: none;
-        //   border-radius: 8px 0 0 8px;
-        //   color: #717171;
+        @media (max-width: 330px) {
+          flex-direction: column;
+        }
 
-        //   @media (max-width: 375px) {
-        //     font-size: 1.4rem;
-        //   }
+        &__email {
+          flex-grow: 1;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.4rem;
+          padding: 1rem;
+          border: 1px solid #c1c1c1;
+          outline: none;
+          border-radius: 8px 0 0 8px;
+          color: #717171;
 
-        //   &::placeholder {
-        //     font-size: 1.8rem;
-        //     font-weight: 400;
-        //     line-height: 2.4rem;
-        //     color: #d8cfcf;
+          @media (max-width: 400px) {
+            font-size: 1.4rem;
+          }
 
-        //     @media (max-width: 375px) {
-        //       font-size: 1.4rem;
-        //     }
-        //   }
-        // }
+          @media (max-width: 330px) {
+            border-radius: 8px 8px 0 0;
+          }
 
-        // &__submit {
-        //   flex-shrink: 0;
-        //   font-size: 1.8rem;
-        //   font-weight: 400;
-        //   line-height: 2.4rem;
-        //   padding-inline: 1rem;
-        //   border: none;
-        //   outline: none;
-        //   background: #eabb17;
-        //   border-radius: 0 8px 8px 0;
-        //   color: #212121;
-        //   cursor: pointer;
+          &::placeholder {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: #d8cfcf;
 
-        //   @media (max-width: 375px) {
-        //     font-size: 1.4rem;
-        //   }
-        // }
+            @media (max-width: 400px) {
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        &__submit {
+          flex-shrink: 0;
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.4rem;
+          padding-inline: 1rem;
+          border: none;
+          outline: none;
+          background: #eabb17;
+          border-radius: 0 8px 8px 0;
+          color: #212121;
+          cursor: pointer;
+
+          @media (max-width: 400px) {
+            font-size: 1.4rem;
+          }
+
+          @media (max-width: 330px) {
+            border-radius: 0 0 8px 8px;
+            padding-block: 0.7rem;
+          }
+        }
       }
     }
   }
