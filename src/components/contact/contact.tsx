@@ -103,12 +103,17 @@ export const Contact = () => {
           <div className="footer__extras__line"></div>
           <div className="footer__extras__body">
             <div className="footer__extras__body__texts">
-              {extraTexts.map((extraText) => (
-                <div key={extraText}>
-                  <div className="footer__extras__body__texts__text">
+              {extraTexts.map((extraText, index, array) => (
+                <div
+                  key={extraText}
+                  className="footer__extras__body__texts__text-dot"
+                >
+                  <div className="footer__extras__body__texts__text-dot__text">
                     {extraText}
                   </div>
-                  <div className="footer__extras__body__texts__dot"></div>
+                  {index !== array.length - 1 && (
+                    <div className="footer__extras__body__texts__text-dot__dot"></div>
+                  )}
                 </div>
               ))}
             </div>
