@@ -80,10 +80,10 @@ export const Contact = () => {
         <SectionHeader normalText="Here’s where" accentText="you can find us" />
 
         <span className="contact__image">
-          {width > 350 ? (
+          {width > 375 ? (
             <Image src="/map.svg" width="1440" height="620" />
           ) : (
-            <Image src="/map.svg" width="420" height="219" />
+            <Image src="/map-mobile.svg" width="420" height="219" />
           )}
         </span>
       </section>

@@ -1,8 +1,13 @@
-export const Logo = () => {
+import Image from "next/image";
+
+export const Logo = ({ logoProps }) => {
   return (
-    <div className="logo">
-      <span className="logo__text">Office</span>
-      <span className="logo__accent">X</span>
-    </div>
+    <span className="logo">
+      <Image
+        src={logoProps.path}
+        width={logoProps.width}
+        height={logoProps.height}
+      />
+    </span>
   );
 };
