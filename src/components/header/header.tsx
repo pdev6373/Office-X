@@ -31,7 +31,7 @@ export const Header = () => {
         onClick={handleClick}
         src={icon}
         width={width > 400 ? 22 : 15.75}
-        height={width > 400 ? 16.5 : 15}
+        height={width > 400 ? 16.5 : 12}
       />
     );
 
