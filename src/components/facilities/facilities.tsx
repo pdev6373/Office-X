@@ -7,8 +7,9 @@ export const Facilities = () => {
   const { width } = useWindowDimensions();
 
   const getImageDimension = (path: string, title: string) => {
-    const getImageWidth = () => (width > 600 ? 387 : 277);
-    const getImageHeight = () => (width > 600 ? 329 : 232);
+    const getImageWidth = () => (width > 1000 ? 387 : width > 630 ? 330 : 277);
+    const getImageHeight = () =>
+      width > 1000 ? 329 : width > 630 ? 276.3899 : 232;
 
     return {
       image: {

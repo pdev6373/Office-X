@@ -619,7 +619,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 0 10.9rem 0;
+  padding-block: 8rem 10.9rem;
   overflow-x: scroll;
   scrollbar-width: none;
 
@@ -631,10 +631,10 @@ a {
     background: none;
   }
 
-  // @media (max-width: 700px) {
-  //   padding: 4rem 1.6rem;
-  //   align-items: flex-start;
-  // }
+  @media (max-width: 630px) {
+    padding-block: 4rem 5rem;
+    align-items: flex-start;
+  }
 
   .sectionHeader {
     position: sticky;
@@ -648,8 +648,14 @@ a {
     padding-left: 12rem;
     gap: 4rem;
 
-    // &::-webkit-scrollbar-thumb {
-    // }
+    @media (max-width: 630px) {
+      padding-left: 4rem;
+      gap: 2rem;
+    }
+
+    @media (max-width: 400px) {
+      padding-left: 1.6rem;
+    }
 
     &__facility {
       display: flex;
@@ -661,12 +667,12 @@ a {
         padding-right: 4rem;
       }
 
-      // &__title {
-      //   font-size: 1.8rem;
-      //   font-weight: 600;
-      //   line-height: 2.3rem;
-      //   color: #212121;
-      // }
+      &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 2.3rem;
+        color: #212121;
+      }
     }
   }
 }
