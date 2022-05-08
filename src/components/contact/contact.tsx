@@ -3,6 +3,8 @@ import Image from "next/image";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { SectionHeader } from "../sectionHeader";
 import { FooterInfo } from "./footerInfo";
+import { ContactIcons } from "./contactIcons";
+import { ContactExtras } from "./contactExtras";
 
 export const Contact = () => {
   const { width } = useWindowDimensions();
@@ -54,26 +56,6 @@ export const Contact = () => {
     },
   ];
 
-  let socialIcons = [
-    {
-      path: "/facebook.svg",
-      width: 18,
-      height: 18,
-    },
-    {
-      path: "/twitter.svg",
-      width: 18,
-      height: 18,
-    },
-    {
-      path: "/instagram.svg",
-      width: 18,
-      height: 18,
-    },
-  ];
-
-  let extraTexts = ["2022 officeX, Inc.", "Privacy", "Terms", "Sitemap"];
-
   return (
     <>
       <section className="contact">
@@ -102,36 +84,8 @@ export const Contact = () => {
         <div className="footer__extras">
           <div className="footer__extras__line"></div>
           <div className="footer__extras__body">
-            <div className="footer__extras__body__texts">
-              {extraTexts.map((extraText, index, array) => (
-                <div
-                  key={extraText}
-                  className="footer__extras__body__texts__text-dot"
-                >
-                  <div className="footer__extras__body__texts__text-dot__text">
-                    {extraText}
-                  </div>
-                  {index !== array.length - 1 && (
-                    <div className="footer__extras__body__texts__text-dot__dot"></div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <div className="footer__extras__body__iconsWrapper">
-              {socialIcons.map((socialIcon) => (
-                <span
-                  className="footer__extras__body__iconsWrapper__icon"
-                  key={socialIcon.path}
-                >
-                  <Image
-                    src={socialIcon.path}
-                    width={socialIcon.width}
-                    height={socialIcon.height}
-                  />
-                </span>
-              ))}
-            </div>
+            <ContactExtras />
+            <ContactIcons />
           </div>
         </div>
       </footer>
