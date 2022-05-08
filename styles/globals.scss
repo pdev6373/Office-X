@@ -92,7 +92,7 @@ a {
     padding: 0.285em 1.425em;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     font-size: clamp(1.2rem, 4vw, 1.4rem);
   }
 
@@ -120,7 +120,7 @@ a {
       line-height: 2.2143;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 400px) {
       font-size: clamp(1.2rem, 4vw, 1.4rem);
     }
 
@@ -136,6 +136,7 @@ a {
   font-weight: 600;
   line-height: 1.9118;
   color: #212121;
+  text-align: center;
 
   @media (max-width: 930px) {
     font-size: 3.2rem;
@@ -149,7 +150,7 @@ a {
     font-size: clamp(2.7rem, 5.73vw, 3.5rem);
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     font-size: clamp(1.85rem, 6.4vw, 2.4rem);
     // font-size: 2.4rem;
     line-height: 1.25;
@@ -320,7 +321,7 @@ a {
   text-align: center;
   color: #fff;
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     margin-bottom: 4rem;
   }
 
@@ -357,7 +358,7 @@ a {
       padding-inline: 0;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 400px) {
       font-size: clamp(1.5rem, 6.4vw, 2.4rem);
       justify-content: flex-start;
       gap: 1em;
@@ -424,7 +425,7 @@ a {
         margin-top: 1em;
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         font-size: clamp(1.75rem, 6.4vw, 2.4rem);
         padding-inline: 0;
         line-height: 1.166667;
@@ -488,7 +489,7 @@ a {
         line-height: 1.5;
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         font-size: clamp(1.2rem, 3.73vw, 1.4rem);
         line-height: 1.4286;
         padding-inline: 0;
@@ -524,7 +525,7 @@ a {
     gap: 2.017rem;
     flex-wrap: wrap;
 
-    @media (max-width: 375px) {
+    @media (max-width: 400px) {
       flex-direction: column;
       gap: 2rem;
     }
@@ -553,7 +554,7 @@ a {
         margin-bottom: 0;
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         min-width: 0;
       }
 
@@ -574,14 +575,14 @@ a {
         box-shadow: 0px 4px 28px 0px rgba(113, 113, 113, 0.18);
         color: #212121;
 
-        @media (max-width: 375px) {
+        @media (max-width: 400px) {
           padding-bottom: 6.6rem;
         }
 
         & > * {
           width: 75%;
 
-          @media (max-width: 375px) {
+          @media (max-width: 400px) {
             width: 86.0058%;
           }
         }
@@ -592,7 +593,7 @@ a {
           line-height: 1.2778;
           margin-bottom: 5.4rem;
 
-          @media (max-width: 375px) {
+          @media (max-width: 400px) {
             margin-bottom: 5.6rem;
           }
 
@@ -655,12 +656,8 @@ a {
     gap: 4rem;
 
     @media (max-width: 630px) {
-      padding-left: 4rem;
-      gap: 2rem;
-    }
-
-    @media (max-width: 400px) {
       padding-left: 1.6rem;
+      gap: 2rem;
     }
 
     &__facility {
@@ -708,7 +705,7 @@ a {
     padding: 5.1rem 2.5rem;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     padding: 5.1rem 1.6rem;
   }
 
@@ -723,7 +720,7 @@ a {
       margin-bottom: 6rem;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 400px) {
       margin-bottom: 4rem;
     }
   }
@@ -752,7 +749,7 @@ a {
       justify-content: center;
       align-items: center;
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         margin-bottom: 3.3rem;
       }
     }
@@ -788,7 +785,7 @@ a {
           line-height: 3rem;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 400px) {
           font-size: 1.4rem;
           line-height: 2.8rem;
           padding-inline: 1.1rem;
@@ -866,16 +863,15 @@ a {
   align-items: center;
   padding-block: 8rem;
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     padding-block: 4rem 6rem;
   }
 
   .sectionHeader {
     margin-bottom: 8rem;
+    padding-inline: 3rem;
 
-    @media (max-width: 375px) {
-      text-align: center;
-      padding-inline: 8.4rem;
+    @media (max-width: 400px) {
       margin-bottom: 3.4rem;
     }
   }
@@ -884,6 +880,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 
@@ -929,11 +926,7 @@ a {
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
-        margin-bottom: 9rem;
-
-        @media (max-width: 375px) {
-          margin-bottom: 4.8rem;
-        }
+        margin-bottom: 4.8rem;
 
         &__text {
           display: flex;
@@ -950,9 +943,9 @@ a {
   }
 
   &__extras {
-    margin-bottom: 6.9rem;
+    margin-block: 4.2rem 6.9rem;
 
-    @media (max-width: 375px) {
+    @media (max-width: 400px) {
       margin-block: 2rem;
     }
 
@@ -963,7 +956,7 @@ a {
       background: #c4c4c4;
       border-radius: 100px;
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         margin-bottom: 4.25rem;
       }
     }
@@ -974,7 +967,7 @@ a {
       flex-wrap: wrap;
       gap: 6rem;
 
-      @media (max-width: 375px) {
+      @media (max-width: 400px) {
         flex-direction: column;
         align-items: center;
       }
@@ -986,7 +979,7 @@ a {
         color: #212121;
         flex-wrap: wrap;
 
-        @media (max-width: 375px) {
+        @media (max-width: 400px) {
           margin-bottom: 4.25rem;
         }
 
