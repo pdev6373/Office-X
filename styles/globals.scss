@@ -1041,6 +1041,10 @@ a {
     gap: 2.25rem;
     margin-bottom: 2rem;
     padding-inline: 1.6rem;
+
+    & > * {
+      margin: 0;
+    }
   }
 }
 
@@ -1138,7 +1142,7 @@ a {
 
     @media (max-width: 630px) {
       padding-inline: 1.6rem;
-      margin-top: 126px;
+      // margin-top: 126px;
     }
   }
 
@@ -1146,7 +1150,7 @@ a {
     font-size: 4.8rem;
     font-weight: 500;
     line-height: 7.2rem;
-    margin-bottom: 2rem;
+    margin-block: 4rem 2rem;
 
     @media (max-width: 770px) {
       font-size: 4rem;
@@ -1162,16 +1166,12 @@ a {
       font-size: 3.5rem;
       line-height: 6rem;
       width: 500px;
-    }
 
-    @media (max-width: 550px) {
-      width: 400px;
-    }
-
-    @media (max-width: 450px) {
-      font-size: 3rem;
-      width: 330px;
-      line-height: 5rem;
+      @media (max-width: 550px) {
+        width: 400px;
+        font-size: 3rem;
+        line-height: 5rem;
+      }
     }
 
     @media (max-width: 400px) {
@@ -1202,7 +1202,7 @@ a {
     padding: 1.45rem 2rem;
     color: #212121;
 
-    @media (max-width: 400px) {
+    @media (max-width: 630px) {
       padding-block: 0.4rem;
     }
 
@@ -1220,5 +1220,9 @@ a {
     gap: 2.25rem;
     margin-bottom: 2rem;
     padding-inline: 1.6rem;
+
+    & > * {
+      margin: 0;
+    }
   }
 }
