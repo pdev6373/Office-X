@@ -23,16 +23,22 @@ const Contact = () => {
       <Header />
 
       <span className="contactPage__hero-wrapper">
-        {width > 400
+        {width <= 950
           ? setImage({
+              path: "/contact-hero-mobile.svg",
+              width: "950",
+              height: "372.4",
+            })
+          : width <= 1200
+          ? setImage({
+              path: "/contact-hero2.png",
+              width: "1200",
+              height: "283.6988",
+            })
+          : setImage({
               path: "/contact-hero.svg",
               width: "1440",
               height: "248",
-            })
-          : setImage({
-              path: "/contact-hero-mobile.svg",
-              width: "400",
-              height: "156.8",
             })}
       </span>
 
