@@ -4,7 +4,7 @@ import { NavLinks } from "./navLinks";
 export const Nav = () => {
   let navLinks = [
     {
-      navlink: "home",
+      navlink: "",
       navtext: "Home",
     },
     {
